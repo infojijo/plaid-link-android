@@ -1,7 +1,6 @@
 package com.plaid.linksample.network
 
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
-import io.reactivex.rxjava3.schedulers.Schedulers
+import io.reactivex.rxjava3.core.Single
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
@@ -27,15 +26,15 @@ object LinkTokenRequester {
    * You can optionally curl for a link_token instead of running the node-quickstart server,
    * and copy and paste the link_token value here.
    */
-  val token
+/*  val token
     get() = api.getLinkToken()
       .subscribeOn(Schedulers.io())
       .observeOn(AndroidSchedulers.mainThread())
-      .map { it.link_token }
+      .map { it.link_token }*/
 
   //Comment out the above and uncomment the below to use a curled Link Token
-  //val token
-  //  get() = Single.just("<GENERATED_LINK_TOKEN>")
+  val token
+    get() = Single.just("link-sandbox-2fdd8054-8018-4ec6-b9b0-1c0856890623")
 
 }
 
