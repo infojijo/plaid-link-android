@@ -66,11 +66,19 @@ configure<org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension> {
 }
 
 configure<com.android.build.gradle.LibraryExtension> {
-    namespace = "com.plaid.linksample.shared"
+    namespace = "com.cibc.us.app.android.shared"
     compileSdkVersion(35)
     
     defaultConfig {
         minSdkVersion(30)
+        consumerProguardFiles("consumer-rules.pro")
+    }
+    
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
     }
     
     compileOptions {

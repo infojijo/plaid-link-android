@@ -15,6 +15,26 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     android:usesCleartextTraffic="true">   <!-- `usesCleartextTraffic` is only to allow http traffic to localhost. Do not use this for production apps.-->
+
+    <!-- Firebase Cloud Messaging Service -->
+    <service
+      android:name=".FirebaseMessagingService"
+      android:exported="false">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
+
+    <!-- Firebase default notification icon and color -->
+    <meta-data
+      android:name="com.google.firebase.messaging.default_notification_icon"
+      android:resource="@drawable/plaid_icon" />
+    <meta-data
+      android:name="com.google.firebase.messaging.default_notification_color"
+      android:resource="@color/colorPrimary" />
+    <meta-data
+      android:name="com.google.firebase.messaging.default_notification_channel_id"
+      android:value="plaid_notifications" />
     <activity
       android:name=".MainActivity"
       android:exported="true"

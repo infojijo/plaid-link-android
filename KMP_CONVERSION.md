@@ -13,19 +13,20 @@ This document describes the conversion of the Plaid Link Android project to Kotl
 - Renamed `app/` to `androidApp/` following KMP conventions
 - Created `shared/` module for multiplatform code
 - Updated `settings.gradle.kts` to include both modules
+- Changed package name from `com.plaid.linksample` to `com.cibc.us.app.android`
 
 ### 3. Shared Module Structure
 ```
 shared/
 ├── src/
 │   ├── commonMain/kotlin/
-│   │   └── com/plaid/linksample/
+│   │   └── com/cibc/us/app/android/
 │   │       ├── Platform.kt (expect/actual pattern)
 │   │       ├── Greeting.kt (demo KMP functionality)
 │   │       └── network/
 │   │           └── LinkSampleApi.kt (common interface)
 │   └── androidMain/kotlin/
-│       └── com/plaid/linksample/
+│       └── com/cibc/us/app/android/
 │           ├── Platform.android.kt (Android implementation)
 │           └── network/
 │               └── LinkTokenRequester.kt (Android-specific networking)

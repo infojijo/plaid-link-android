@@ -134,3 +134,59 @@
 -keep class com.cibc.us.app.android.MainActivityJava { *; }
 -keep class com.cibc.us.app.android.MainActivityStartActivityForResult { *; }
 -keep class com.cibc.us.app.android.MainActivityStartActivityForResultJava { *; }
+
+# Keep Firebase Messaging Service
+-keep class com.cibc.us.app.android.FirebaseMessagingService { *; }
+
+# ===== Firebase Rules =====
+
+# Firebase Core
+-keep class com.google.firebase.** { *; }
+-keepclassmembers class com.google.firebase.** { *; }
+
+# Firebase Messaging
+-keep class com.google.firebase.messaging.** { *; }
+-keepclassmembers class com.google.firebase.messaging.** { *; }
+
+# Firebase Analytics
+-keep class com.google.firebase.analytics.** { *; }
+-keepclassmembers class com.google.firebase.analytics.** { *; }
+
+# Google Play Services
+-keep class com.google.android.gms.** { *; }
+-keepclassmembers class com.google.android.gms.** { *; }
+
+# Firebase internal classes
+-keep class com.google.firebase.internal.** { *; }
+-keepclassmembers class com.google.firebase.internal.** { *; }
+
+# Firebase components
+-keep class com.google.firebase.components.** { *; }
+-keepclassmembers class com.google.firebase.components.** { *; }
+
+# Firebase installations
+-keep class com.google.firebase.installations.** { *; }
+-keepclassmembers class com.google.firebase.installations.** { *; }
+
+# Firebase datatransport
+-keep class com.google.android.datatransport.** { *; }
+-keepclassmembers class com.google.android.datatransport.** { *; }
+
+# Keep Firebase model classes that might be used for serialization
+-keepclassmembers class * {
+    @com.google.firebase.database.PropertyName <fields>;
+    @com.google.firebase.database.PropertyName <methods>;
+}
+
+# Keep classes that implement Parcelable for Firebase
+-keep class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+
+# Firebase Remote Config
+-keep class com.google.firebase.remoteconfig.** { *; }
+-keepclassmembers class com.google.firebase.remoteconfig.** { *; }
+
+# Firebase Crashlytics (if used in the future)
+-keep class com.google.firebase.crashlytics.** { *; }
+-keepclassmembers class com.google.firebase.crashlytics.** { *; }
