@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "987654321098",
+    "project_id": "cibc-us-app-android-prod",
+    "storage_bucket": "cibc-us-app-android-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987654321098:android:fedcba0987654321fedcba",
+        "android_client_info": {
+          "package_name": "com.cibc.us.app.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987654321098-zyxwvutsrqponmlkjihgfedcba987654.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyZYXWVUTSRQPONMLKJIHGFEDCBA9876543"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987654321098-zyxwvutsrqponmlkjihgfedcba987654.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
